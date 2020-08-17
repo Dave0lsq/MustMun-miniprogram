@@ -1,0 +1,48 @@
+<view class = "p"><text>報名系統\n</text></view>
+
+ <form bindsubmit="formSubmit" bindreset="formReset">  
+
+    <view class="section">  
+      <view class="section__title">姓名</view>  
+        <input name="name" bindinput="addName" placeholder="請輸入姓名" />  
+    </view>  
+
+  <picker name="sex" bindchange="bindSexPickerChange" value="{{SexIndex}}" range="{{SexArr}}">
+	  <view class="section">
+		  {{seleNulla?SexArr[SexIndex]:'請選擇性别'}}
+	  </view>
+  </picker>
+
+    <view class = "section">
+      <view class="section_title">學號</view>
+        <input name="id" bindinput="addId" onkeyup="this.value=this.value.toUpperCase()" placeholder="請輸入學號" />
+    </view>
+
+  <picker name="faculty" bindchange="bindFacultyPickerChange" value="{{FacultyIndex}}" range="{{FacultyArr}}">
+	  <view class="section">
+		  {{seleNullb?FacultyArr[FacultyIndex]:'請選擇學院'}}
+	  </view>
+  </picker>
+
+  <picker name="sex" bindchange="bindOrPickerChange" value="{{OrIndex}}" range="{{OrArr}}">
+	  <view class="section">
+		  {{seleNullc?OrArr[OrIndex]:'請選擇是否參加過模聯'}}
+	  </view>
+  </picker>
+
+    <view class="section">  
+      <view class="section__title">高中學校</view>  
+        <input name="school" bindinput="addSchool" placeholder="請輸入" />  
+    </view>  
+
+    <view class="section">  
+      <view class="section__title">手機號</view>  
+        <input name="phone" bindinput="addPhone" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="請輸入" />  
+    </view>  
+
+    <view class="btn-area">  
+      <button type="primary" bindtap="addData" formType="submit">提交</button>  
+      <button formType="reset">重置</button>  
+    </view> 
+
+  </form>  

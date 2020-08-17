@@ -1,0 +1,67 @@
+
+  <view class = "p"><text>報名系統\n</text></view>
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+      <view class="page-section">
+        <view class="page-section-title">姓名</view>
+          <input name="phone" placeholder="請輸入姓名" />  
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">性別</view>
+        <radio-group name="radio">
+          <label><radio value="radio1"/>男</label>
+          <label><radio value="radio2"/>女</label>
+        </radio-group>
+      </view>
+
+    <picker bindchange="bindYearPickerChange" value="{{FacultyIndex}}" range="{{FacultyArr}}">
+	    <view class="section">
+		    {{seleNull?FacultyArr[FacultyIndex]:'請選擇學院'}}
+	    </view>
+    </picker>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">是否參加過模聯</view>
+        <switch name="switch"/>
+      </view>
+
+       <view class="page-section">
+        <view class="page-section-title">學校/組織</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0">
+              <input class="weui-input" name="name" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>     
+
+        <view class="page-section-title">手機號</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0">
+              <input class="weui-input" name="phone" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">報名意向</view>
+        <radio-group name="radio">
+          <label><radio value="radio1"/>Test1</label>
+          <label><radio value="radio2"/>Test2</label>
+          <label><radio value="radio3"/>Test3</label>
+        </radio-group>
+      </view>
+
+      <view><text>\n\n</text></view>
+
+      <view class="btn-area">
+        <button  type="primary" formType="submit">提交</button>
+        <button  formType="reset">重置</button>
+      </view>
+    </form>
+  </view>
+
