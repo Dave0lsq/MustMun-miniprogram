@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/index/index",
+    "pages/Register/Register",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/testr/testr"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "MustMun",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首頁",
+      "iconPath": "icon/_home.png",
+      "selectedIconPath": "icon/home.png"
+    },
+    {
+      "pagePath": "pages/Register/Register",
+      "text": "報名",
+      "iconPath": "icon/_Register.png",
+      "selectedIconPath": "icon/Register.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
